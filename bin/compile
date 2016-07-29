@@ -21,6 +21,9 @@ ENV_DIR=$3
 # This is necessary for incremental compile, because sbt invalidates the
 # cache if the path is different.
 BUILD_DIR="/tmp/scala_buildpack_build_dir"
+echo "APP_BUILD_DIR=${APP_BUILD_DIR}"
+echo "BP_DIR=${BP_DIR}"
+echo "PWD=$(pwd)"
 mv $APP_BUILD_DIR $BUILD_DIR
 git -C $BUILD_DIR init
 git -C $BUILD_DIR config user.email "you@example.com"
