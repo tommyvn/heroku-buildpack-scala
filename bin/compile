@@ -23,10 +23,10 @@ ENV_DIR=$3
 BUILD_DIR="/tmp/scala_buildpack_build_dir"
 mv $APP_BUILD_DIR $BUILD_DIR
 git -C $BUILD_DIR init
-git -C $BUILD_DIR add .
-git -C $BUILD_DIR commit -m "full commit"
 git -C $BUILD_DIR config user.email "you@example.com"
 git -C $BUILD_DIR config user.name "Your Name"
+git -C $BUILD_DIR add .
+git -C $BUILD_DIR commit -m "full commit"
 
 # Now that we've moved into a new tmp dir, we need to fix the PATH
 # This is only necessary when using heroku-buildpack-multi because earlier
